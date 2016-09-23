@@ -10,11 +10,10 @@ using namespace std;
 vector<string> split(const string &s, char delim) {
 	vector<string> elems;
 	stringstream ss;
-	ss.str(s);
 	string item;
-	while (getline(ss, item, delim)) {
+	ss.str(s);
+	while (getline(ss, item, delim))
 		elems.push_back(item);
-	}
 	return elems;
 }
 
@@ -30,11 +29,7 @@ bool is_reserved_word(const string &token)
 	string reserved_words[] = {"cout<<", "for", "int", "while"};
 
 	for (string reserved_word : reserved_words)
-	{
-		if (token == reserved_word)
-			return true;
-	}
-
+		if (token == reserved_word) return true;
 	return false;
 }
 
@@ -43,17 +38,13 @@ bool is_special_symbol(const string &token)
 	string special_symbols[] = {"=", "*", "-", ";", "(", ")", "<="};
 
 	for (string special_symbol : special_symbols)
-	{
-		if (token == special_symbol)
-			return true;
-	}
+		if (token == special_symbol) return true;
 	return false;
 }
 
 bool is_identifier(const string &token)
 {
-	if (isdigit(token[0]))
-		return false;
+	if (isdigit(token[0])) return false;
 	return true;
 }
 
