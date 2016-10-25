@@ -1,6 +1,6 @@
 # assignment-4
 
-Write a program to read a statement and determine wheter each token is a number, identifier, a reserved word, or special character. Suppose the following arrays are already given
+Write a program to read a statement and determine whether each token is a number, identifier, a reserved word, or special character. Suppose the following arrays are already given
 
 char reservedWords[4][10] = {"cout<<", "for", "int", "while"}
 
